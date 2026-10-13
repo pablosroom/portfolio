@@ -134,7 +134,6 @@ header {
     stroke: #9CA3AF;
 }
 
-/* Actieve pagina: Mijn Projecten */
 .nav_mijnprojecten {
     background: rgba(255, 255, 255, 0.10);
 }
@@ -159,7 +158,6 @@ header {
     line-height: normal;
 }
 
-/* ---------- Pagina-inhoud ---------- */
 
 .main {
     box-sizing: border-box;
@@ -206,7 +204,6 @@ header {
     line-height: normal;
 }
 
-/* ---------- Projecten ---------- */
 
 .projecten {
     display: flex;
@@ -234,7 +231,6 @@ header {
 }
 
 .project_grid {
-    /* Hoogte van de afbeelding bovenin elke kaart: hier aanpassen */
     --project-img-hoogte: 90px;
 
     display: grid;
@@ -314,7 +310,6 @@ header {
     line-height: 1.5;
 }
 
-/* Lege placeholder-kaarten zijn gedimd */
 .project_card.leeg .project_info {
     opacity: 0.6;
 }
