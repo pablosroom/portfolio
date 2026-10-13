@@ -87,62 +87,8 @@ header {
     text-decoration: none;
 }
 
-.nav_overmij {
-    display: flex;
-    padding: 16px 20px;
-    align-items: center;
-    gap: 16px;
-    align-self: stretch;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.10);
-}
-
-.nav_overmij svg {
-    width: 24px;
-    height: 24px;
-}
-
-.nav_overmij p {
-    margin: 0;
-    color: #FFF;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.nav_mijnskills {
-    display: flex;
-    padding: 16px 20px;
-    align-items: center;
-    gap: 16px;
-    align-self: stretch;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.00);
-}
-
-.nav_mijnskills:hover {
-    background-color: rgb(31, 31, 31)
-}
-
-.nav_mijnskills svg {
-    width: 24px;
-    height: 24px;
-    stroke-width: 2px;
-    stroke: #9CA3AF;
-}
-
-.nav_mijnskills p {
-    margin: 0;
-    color: #9CA3AF;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
+.nav_overmij,
+.nav_mijnskills,
 .nav_mijnprojecten {
     display: flex;
     padding: 16px 20px;
@@ -153,17 +99,19 @@ header {
     background: rgba(0, 0, 0, 0.00);
 }
 
+.nav_overmij:hover,
 .nav_mijnprojecten:hover {
-    background-color: rgb(31, 31, 31)
+    background-color: rgb(31, 31, 31);
 }
 
-.nav_mijnprojecten svg {
-    width: 20.002px;
-    height: 18px;
+.nav_overmij svg path {
+    width: 24px;
+    height: 24px;
     stroke-width: 2px;
     stroke: #9CA3AF;
 }
 
+.nav_overmij p,
 .nav_mijnprojecten p {
     margin: 0;
     color: #9CA3AF;
@@ -174,26 +122,68 @@ header {
     line-height: normal;
 }
 
+/* Actieve pagina: Mijn Skills */
+.nav_mijnskills {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.nav_mijnskills svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav_mijnskills svg path {
+    stroke-width: 2px;
+    stroke: #FFF;
+}
+
+.nav_mijnskills p {
+    margin: 0;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.nav_mijnprojecten svg {
+    width: 20.002px;
+    height: 18px;
+}
+
+.nav_mijnprojecten svg path {
+    stroke-width: 2px;
+    stroke: #9CA3AF;
+}
+
 .main {
     box-sizing: border-box;
     display: flex;
     flex: 1;
     min-height: 100vh;
-    padding: 48px 53px 0;
+    padding: 48px 53px;
     align-items: flex-start;
 }
 
 .content {
     display: flex;
+    width: 100%;
     max-width: 1077px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 32px;
+}
+
+.intro {
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .content p.title {
     margin: 0;
-    align-self: stretch;
     color: #FFF;
     font-family: "Jaldi", sans-serif;
     font-size: 64px;
@@ -204,7 +194,6 @@ header {
 
 .content p.descriptie {
     margin: 0;
-    align-self: stretch;
     color: #FFF;
     font-family: "Jaldi", sans-serif;
     font-size: 24px;
@@ -213,25 +202,46 @@ header {
     line-height: normal;
 }
 
-.content_row {
-    display: flex;
-    align-items: flex-start;
+.skills_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-    flex: 1 0 0;
-    align-self: stretch;
+    width: 100%;
+    max-width: 990px;
 }
 
-.text {
+.skill_card {
+    box-sizing: border-box;
     display: flex;
-    width: 100%;
-    max-width: 672px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
+    gap: 16px;
+    aspect-ratio: 1 / 1;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.08);
 }
 
-.title2 {
+.skill_icon {
+    display: flex;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.skill_icon svg {
+    stroke: #FFF;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.skill_naam {
     margin: 0;
     color: #FFF;
     font-family: "Jaldi", sans-serif;
@@ -240,22 +250,28 @@ header {
     line-height: 1.2;
 }
 
-.kop {
-    margin: 0;
-    color: #FFF;
-    font-family: "Jaldi", sans-serif;
-    font-size: 18px;
+.skill_tekst {
+    margin: auto 0 0;
+    color: #9CA3AF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
 }
 
-.foto {
-    width: 329px;
-    flex-shrink: 0;
+@media (max-width: 1100px) {
+    .skills_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-.foto img {
-    display: block;
-    width: 100%;
-    height: auto;
+@media (max-width: 760px) {
+    .skills_grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skill_card {
+        aspect-ratio: auto;
+        min-height: 220px;
+    }
 }
