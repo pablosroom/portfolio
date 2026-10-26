@@ -231,7 +231,6 @@ header {
 
 .project_grid {
     --project-img-hoogte: 90px;
-
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
@@ -282,7 +281,13 @@ header {
     line-height: 1.2;
     
 }
-
+.project_titel a {
+    color: inherit;
+    text-decoration: none;
+}
+.project_titel a:hover {
+    text-decoration: underline;
+}
 .project_tekst {
     margin: 0;
     color: #9CA3AF;
