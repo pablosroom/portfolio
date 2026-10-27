@@ -8,7 +8,6 @@ header {
     display: flex;
 }
 
-/* ---------- Sidebar ---------- */
 
 .sidebar {
     position: sticky;
@@ -91,7 +90,8 @@ header {
 
 .nav_overmij,
 .nav_mijnskills,
-.nav_mijnprojecten {
+.nav_mijnprojecten,
+.nav_contact {
     display: flex;
     padding: 16px 20px;
     align-items: center;
@@ -102,7 +102,8 @@ header {
 }
 
 .nav_overmij:hover,
-.nav_mijnskills:hover {
+.nav_mijnskills:hover,
+.nav_contact:hover {
     background-color: rgb(31, 31, 31);
 }
 
@@ -114,7 +115,8 @@ header {
 }
 
 .nav_overmij p,
-.nav_mijnskills p {
+.nav_mijnskills p,
+.nav_contact p {
     margin: 0;
     color: #9CA3AF;
     font-family: "Inter", sans-serif;
@@ -158,6 +160,11 @@ header {
     line-height: normal;
 }
 
+
+.nav_contact svg {
+    width: 24px;
+    height: 24px;
+}
 
 .main {
     box-sizing: border-box;

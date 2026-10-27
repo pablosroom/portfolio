@@ -89,7 +89,8 @@ header {
 
 .nav_overmij,
 .nav_mijnskills,
-.nav_mijnprojecten {
+.nav_mijnprojecten,
+.nav_contact {
     display: flex;
     padding: 16px 20px;
     align-items: center;
@@ -100,7 +101,8 @@ header {
 }
 
 .nav_overmij:hover,
-.nav_mijnprojecten:hover {
+.nav_mijnprojecten:hover,
+.nav_contact:hover {
     background-color: rgb(31, 31, 31);
 }
 
@@ -112,7 +114,8 @@ header {
 }
 
 .nav_overmij p,
-.nav_mijnprojecten p {
+.nav_mijnprojecten p,
+.nav_contact p {
     margin: 0;
     color: #9CA3AF;
     font-family: "Inter", sans-serif;
@@ -154,6 +157,11 @@ header {
 .nav_mijnprojecten svg path {
     stroke-width: 2px;
     stroke: #9CA3AF;
+}
+
+.nav_contact svg {
+    width: 24px;
+    height: 24px;
 }
 
 .main {
